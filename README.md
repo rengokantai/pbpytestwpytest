@@ -17,9 +17,19 @@ def test_defaults():
   assert t1 == t2
 ```
 
+name rule:
+- Test files should be named `test_<something>.py` or `<something>_test.py`.
+- Test methods and functions should be named `test_<something>`.
+- Test classes should be named `Test<Something>`.
 
 
 
+### Running Only One Test
+```
+pytest -v tasks/test_four.py::test_asdict
+```
 
-
-
+### Using Options
+```
+pytest --collect-only
+```
